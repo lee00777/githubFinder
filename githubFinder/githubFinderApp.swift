@@ -1,17 +1,22 @@
 //
-//  githubFinderApp.swift
-//  githubFinder
+//  GitHub_SearchApp.swift
+//  GitHub_Search
 //
-//  Created by GYUYOUNG LEE on 2022/01/09.
+//  Created by Alessandro H de Jesus & Gyuyoung Lee on 2021-11-23.
 //
 
 import SwiftUI
 
 @main
-struct githubFinderApp: App {
+struct GitHub_SearchApp: App {
+    // MARK: Property
+    var globalUserData = UserData()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+            // Add a property to tne environment
+                .environmentObject(globalUserData)
         }
     }
 }
